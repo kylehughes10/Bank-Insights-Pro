@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UBPR Report Generator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      label{
+        font-weight: 600;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        text-align: center;
+      }
+      #fdicCertNumber {
+        padding: 8px;
+        margin-right: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      #generateReport {
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #generateReport:hover {
+        background-color: #0056b3;
+      }
+      #loadingMessage {
+        display: none;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div class="container" id="inputContainer">
+    <label for="fdicCertNumber">Enter the bank's FDIC Certificate Number:</label>
+    <input type="text" id="fdicCertNumber" name="fdicCertNumber">
+    <button id="generateReport">Generate Report</button>
+</div>
+      
+<div class="container" id="loadingMessage" style="display: none;">This could take a few minutes</div>      
+
+<script>
+    function animateDots() {
+      var dots = 0;
+      return setInterval(function() {
+        $('#loadingMessage').text('This could take a few minutes' + '.'.repeat(dots));
+        dots = (dots + 1) % 4; // Reset after 3 dots
+      }, 500); // Adjust the timing as you like
+    }
+    
+    $(document).ready(function() {
+        $('#generateReport').click(function() {
+          var fdicCertNumber = $('#fdicCertNumber').val();
+          if (fdicCertNumber) {
+            var interval = animateDots();
+            $('#inputContainer').hide();
+            $('#loadingMessage').show();
+      
+            $.ajax({
+              url: 'http://127.0.0.1:5000/run-ubpr',
+              type: 'POST',
+              data: { fdicCertNumber: fdicCertNumber },
+              success: function(response) {
+                clearInterval(interval);
+                $('#loadingMessage').hide();
+      
+                if (response.content) {
+                  console.log('File content received:', response.content);
+                  var contentDiv = $('<div>', { class: 'report-content' }).text(response.content);
+                  $('#inputContainer').replaceWith(contentDiv); // Replace the input container with the new content
+                } else {
+                  console.error('No content received');
+                  // Optionally, show an error message on the page
+                  $('#inputContainer').html('Error: No content received from server.');
+                }
+              },
+              error: function(xhr, status, error) {
+                clearInterval(interval);
+                $('#loadingMessage').hide();
+                console.error('Error:', error);
+                // Optionally, show an error message on the page
+                $('#inputContainer').html('Error: ' + error);
+              }
+            });
+          } else {
+            alert('Please enter an FDIC Certificate Number.');
+          }
+        });
+      });
+    </script>
+</body>
+</html>
