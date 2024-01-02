@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300;1,700&display=swap');
+
+.App {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+.App-header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 1rem;
+  height: 80px;
+  margin: 0;
+  align-items: center;
+  border-bottom: 4px solid #4141E1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+  margin-bottom: 50px;
+  /* background-color: #FAACA8;
+background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%); */
+}
+
+.App-logo {
+  width: 250px;
+}
+
+.Navigation-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+li{
+  margin-right: 30px;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #4141E1;
+  font-size: 18px;
+  list-style: none;
+}
+
+.Subscribe-button {
+  background-color: #FA7A6F;
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+  border: 2px solid #4141E1;
+  /* border-radius: 20px; */
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 150px;
+}
+
+.Subscribe-button:hover{
+  background-color: #4141E1;
+  border: 2px solid #FA7A6F;
+}
+
+.Hero-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+  padding: 25px;
+  text-align: left;
+  
+
+
+}
+
+.Hero-content{
+  width: 100%;
+  max-width: 50vw;
+}
+
+h1{
+  color: black;
+  font-weight: 800;
+  font-size: 50px;
+  margin: 0;
+}
+
+p{
+  color: black;
+  font-size: 18px;
+}
+
+.heroImgDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.Hero-image {
+  width: 100%;
+  height: auto;
+}
+
+.Start-button{
+  background-color: #4141E1;
+  color: white;
+  width: 250px;
+  max-width: 250px;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
+  padding: 20px 20px;
+  border-radius: 50px;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.Start-button:hover{
+  border: 1px solid #4141E1;
+  color: #4141E1;
+  background-color: white;
+}
+
+
+
+.Learn-more-button:hover{
+  background-color: #FA7A6F;
+  color: white;
+}
+
+.input-container {
+  margin-top: 20px;
+}
+
+.report-content {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 20px;
+}
+
+
+.Trusted-banks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.Trusted-text {
+  margin-bottom: 10px; /* Adjust as needed */
+  font-size: 24px; /* Adjust as needed */
+  color: #333; /* Adjust as needed */
+  
+}
+
+.Bank-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px; /* Adjust space between logos as needed */
+}
+
+.Bank-logo {
+  width: 150px;
+  max-width: 150px; /* Adjust as needed */
+  max-height: 50px; /* Adjust as needed */
+  object-fit: contain;
+}
+
+.small{
+  color: black;
+  font-size: 18px;
+}

@@ -1,0 +1,149 @@
+h1{
+  margin-bottom: 30px;
+}
+
+.pricing-container {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .pricing-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap as needed */
+  }
+
+  .price{
+    font-size: 32px;
+    font-weight: 600;
+    color: black;
+  }
+  
+  .pricing-option {
+    background-color: white; /* Example background color for pricing card */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Example shadow */
+    width: 300px; /* Adjust the width as needed */
+  }
+
+  .pricing-option > button{
+    width: 150px;
+    max-width: 150px;
+    margin-bottom: 10px;
+  }
+
+  .pricing-option:nth-child(1){
+    border-top: 5px solid lightslategray;
+  }
+
+  .pricing-option:nth-child(1) > button{
+    background-color: lightslategray;
+  }
+
+  .pricing-option:nth-child(1) > button:hover{
+    background-color: white;
+    border: 1px solid lightslategray;
+    color: lightslategrey;
+    cursor: pointer;
+  }
+  
+  .pricing-option:nth-child(2){
+    border-top: 5px solid #4141E1;
+  }
+
+  .pricing-option:nth-child(2) > button{
+    background-color: #4141E1;
+  }
+
+  .pricing-option:nth-child(2) > button:hover{
+    background-color: white;
+    border: 1px solid #4141E1;
+    color: #4141E1;
+    cursor: pointer;
+  }
+
+  .pricing-option:nth-child(3){
+    border-top: 5px solid #FA7A6F;
+  }
+
+  .pricing-option:nth-child(3) > button{
+    background-color: #FA7A6F;
+  }
+
+  .pricing-option:nth-child(3) > button:hover{
+    background-color: white;
+    border: 1px solid #FA7A6F;
+    color: #FA7A6F;
+    cursor: pointer;
+  }
+  
+  .pricing-option h2 {
+    color: black; /* Example color */
+  }
+  
+  .pricing-option p {
+    color: black; /* Example color */
+  }
+  
+  .pricing-option button {
+    background-color: #6200ee; /* Example button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .pricing-container {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .pricing-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap as needed */
+  }
+  
+  .pricing-option {
+    background-color: white; /* Example background color for pricing card */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Example shadow */
+    width: 300px; /* Adjust the width as needed */
+  }
+  
+  .pricing-option h2 {
+    color: #333; /* Example color */
+  }
+  
+  .pricing-option p {
+    color: #666; /* Example color */
+  }
+  
+  .pricing-option button {
+    background-color: #6200ee; /* Example button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  ul{
+    text-align: left;
+    height: 150px;
+  }
+
+  li{
+    list-style: disc;
+    margin-bottom: 10px;
+  }
+
+  .user-account{
+    font-size: 12px;
+  }
+
+  .plan-logo{
+    width: 50px;
+    margin: none;
+  }

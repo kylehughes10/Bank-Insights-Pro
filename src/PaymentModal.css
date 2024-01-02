@@ -1,0 +1,83 @@
+.payment-modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .payment-methods {
+    margin: 10px 0;
+    /* Add styles for your payment method icons here */
+  }
+  
+  form input {
+    display: block;
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input, .expiry-cvv input {
+    box-sizing: border-box; /* Add this to include padding and borders in the element's total width and height */
+    display: block;
+    width: 100%; /* Adjust this back to 100% */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.expiry-cvv {
+    display: flex;
+    gap: 10px; /* Adjust if necessary */
+}
+  
+.expiry-cvv input {
+    width: calc(33.333% - (2 * 10px)); /* Adjust this to 33.333% for 3 inputs and subtract the total horizontal padding */
+    margin-bottom: 10px;
+}
+
+.expiry-cvv input[name="expiryMonth"],
+.expiry-cvv input[name="cvv"] {
+    flex: none; /* Do not grow or shrink */
+    width: 28%; /* Adjust the width as needed */
+}
+
+.expiry-cvv input[name="expiryYear"] {
+    flex: none; /* Do not grow or shrink */
+    width: 38%; /* Adjust the width as needed */
+}
+  
+  .submit-button {
+    background-color: #6200ee;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  

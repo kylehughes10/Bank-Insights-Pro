@@ -1,0 +1,40 @@
+/* Reports.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed for your layout */
+}
+label {
+    font-weight: 600;
+}
+#fdicCertNumber {
+    padding: 8px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+#generateReport {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#generateReport:hover {
+    background-color: #0056b3;
+}
+#loadingMessage {
+    font-weight: bold;
+}
